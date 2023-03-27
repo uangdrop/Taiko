@@ -1,28 +1,26 @@
-# Tutorial Instalasi Taiko Node
-![image](https://user-images.githubusercontent.com/101635385/210137987-bdc3fe6f-270d-40f8-b843-d927a58ca6e9.png)
 
 
-<h1 align="center"> Taiko Alpha-2 Node </h1>
-<h1 align="center"> Panduan instalasi Node Alpha-2 <br> 
-</h1>
+![photo_2023-03-27_08-11-38](https://user-images.githubusercontent.com/128940865/227817810-a87af886-3bb5-4371-8824-06776472fba0.jpg)
 
+
+
+<h1 align="center"> Instal Node Taiko Alpha-2 <br> </h1>
 
 
 ### Taiko Bridge:
 
  * [Bridge](https://bridge.a2.taiko.xyz/#/)
- * [swap](https://swap.a2.taiko.xyz/#/swap)
+ * [Swap](https://swap.a2.taiko.xyz/#/swap)
  * [Adding Chain](https://chainid.network/)
  * [Explorer](https://explorer.a2.taiko.xyz/)
 
  
- ### Linkler
+ ### Link
  * [Kopi Hitam Telegram](https://t.me/uangdrop)
- * [Hercules Twitter](https://twitter.com/uangdrop)
+ * [Kopi Hitam Twitter](https://twitter.com/uangdrop)
  * [Taiko Dc](https://discord.gg/taikoxyz)
  
  ## 🟢 Sistem Requirement
-
 
 
 Saran:
@@ -82,74 +80,62 @@ Buka file ".env", Disini ada beberapa yang perlu dirubah.. <br>
 ```
 nano .env
 ```
+![Screenshot_9](https://user-images.githubusercontent.com/128940865/227815178-3b17c5f4-d1da-41dd-a571-23b2f7aed50b.png)
 
 <br><br>
 
-Sekarang kita perlu membuat RPC sepolia.  https://dashboard.blockpi.io/
+Sekarang kita membutuhkan endpoint Sepolia L1 dan Websockets, untuk itu… <br>
+⏤ Buat Akun di Alchemy : https://alchemy.com/ <br>
+⏤ Buka Dasbor Klik di dropdown "Apps" lalu "Create App" <br>
+⏤ Pilih Ethereum dan sepolia Testnet dan “Create Apps” <br>
 
-![image](https://user-images.githubusercontent.com/101635385/226991770-91c96236-88be-45e6-abe1-27d24eacd65f.png)
+![Screenshot_7](https://user-images.githubusercontent.com/128940865/227814611-329f182d-cbb0-4c55-8e05-71835ceaf2f5.png)
 
-
-L1_ENDPOINT_HTTP=Blockpi üzerinden alacağınız https linki<br>
-L1_ENDPOINT_WS=Blockpi üzerinden alacağınız wss linki
-
-![image](https://user-images.githubusercontent.com/101635385/226990799-a596650f-1978-4d0a-8fb2-021d07672d62.png)
+⏤ Buka Apps dan klik "VIEW KEYS" <br>
+![Screenshot_8](https://user-images.githubusercontent.com/128940865/227814892-ac26e7d5-42bb-4c3e-ba47-3de3da3c519c.png)
+<br>
+⏤ Salin HTTPS dan WEBSOCKET Anda dan paste di .env yang telah di buka tadi <br>
+L1_ENDPOINT_HTTP=<br>
+L1_ENDPOINT_WSS=<br>
+<br>
+![Screenshot_10](https://user-images.githubusercontent.com/128940865/227815333-fbce24e1-420d-4082-a86a-8d80d938a350.png)
 
 <br>
 
-![image](https://user-images.githubusercontent.com/101635385/226991109-bc633b4b-d30a-405a-90ad-667f99d48684.png)
+Ubah Juga yang dibawah ini : <br>
 
+ENABLE_PROVER=true <br>
+L1_PROVER_PRIVATE_KEY=isiPrivateKeyMetamask <br>
+<br>
+Dari False <br>
+![Screenshot_12](https://user-images.githubusercontent.com/128940865/227817657-73d1146c-ae27-409b-bbca-ce59af25544e.png)
+<br>
+Menjadi True <br> Jangan lupa untuk memasukkan Private Key Anda
+![Screenshot_11](https://user-images.githubusercontent.com/128940865/227815710-b5651b04-03ad-4225-8981-edde94d1c138.png)
 
-<br><br>
-
-ENABLE_PROVER=true yapın<br>
-L1_PROVER_PRIVATE_KEY=Matemask adresinizin private keyini yazın
-
-![image](https://user-images.githubusercontent.com/101635385/226991245-2543ea5d-5371-4fa1-be81-243dfb68413a.png)
-
-
-*ctrl + x Yes diyerek kaydediyoruz. <br>
+LALU SIMPAN. Dengan cmd
+``ctrl + x`` lalu ``Y`` es diyerek kaydediyoruz. <br>
 
 <br>
 
 
+## 🟢 RUN THE NODE
 
-
-<br>
-
-Private Key nasıl alınır sağdaki 3 noktaya tıklayın --- >> ardından hesap bilgileri --- >> Özel anahtarı dışa aktar
-
-![image](https://user-images.githubusercontent.com/101635385/210151390-4342cbb3-5c1c-4e35-96ff-fde422ac08bb.png)
-
-<br>
-
-![image](https://user-images.githubusercontent.com/101635385/210151407-a7b0aa7e-ae39-47cc-b1ab-2697e0d25edf.png)
-
-
-
-
-
-## 🟢 Çalıştırma
-
-Bu işlem sonrası kurulum yapacak ve senkronize olmaya başlayacaktır.
-
+Setelah proses ini, itu akan menginstal dan mulai menyinkronkan
 ```
 docker compose up
 ```
-
-![image](https://user-images.githubusercontent.com/101635385/226992188-1f9174f9-9b8c-4593-bbe8-ece1086d56e4.png)
-
-
-## 🟢 Explorer üzerinden block görüntüleme 
+<br>
+Contoh : <br>
 
 
- * [Explorer](https://explorer.a2.taiko.xyz//)
+![226992188-1f9174f9-9b8c-4593-bbe8-ece1086d56e4](https://user-images.githubusercontent.com/128940865/227816904-eed0b35b-424a-4e16-9fb9-5d09ff64c979.png)
 
 
 
-## 🟢 Log Görme
-
-Eğer başta screen oluşturmadıysanız bir screen oıluşturup logları görebilirsiniz.
+<br><br>
+## 🟢 TAMBAHAN
+## 🟢 Melihat Node yang sedang berjalan
 
 ```
 cd simple-taiko-node
@@ -157,15 +143,15 @@ docker compose logs -f
 ```
 
 
-## 🟢 Durdurma
+## 🟢 Stop Node
 
-Bu işlem sonrası bloklar silinmez sadece node durur.
+Setelah proses ini, blok tidak dihapus, hanya node yang berhenti
 
 ```
 docker compose down
 ```
 
-## 🟢 Nodeyi silme
+## 🟢 Menghapus node
 
 
 ```
@@ -175,60 +161,3 @@ rm -fr simple-taiko-node
 ```
 
 
-## 🟢 Port çakışması yaşayanlar
-
-.env dosyasındaki portları resimdeki gibi yapın
-
-![image](https://user-images.githubusercontent.com/101635385/226996911-78dd39d2-d08c-4630-9ae6-e7e0cae90842.png)
-
-
-
-
-Artık sorunsuz çalıştırabilirsiniz. 
-
-
-
-## 🟢 Sözleşme Oluşturma ( Bunu yapmak şart değil isterseniz yapın )
-
-Bu işlem sonrası kurulum yapacak ve senkronize olmaya başlayacaktır.
-
-```
-curl -L https://foundry.paradigm.xyz | bash
-```
-
-![image](https://user-images.githubusercontent.com/101635385/210168053-69d942f9-65b9-44cc-a42f-32f6d086b537.png)
-
-
-```
-source /root/.bashrc
-```
-
-```
-foundryup
-```
-
-![image](https://user-images.githubusercontent.com/101635385/210168068-bf4d800a-84e2-4c66-a65a-9f831307a6b5.png)
-
-
-```
-forge init hello_foundry && cd hello_foundry
-```
-
-Nodeyi kurduğunuz cüzdanın private keyini yazın 
-
-```
-forge create --legacy --rpc-url https://rpc.a2.taiko.xyz --private-key CÜZDAN-PRİVATE-KEY src/Counter.sol:Counter
-```
-
-![image](https://user-images.githubusercontent.com/101635385/210168108-94cac132-d52e-4c0f-9d90-43043e5d1a7a.png)
-
-
-Sözleşme aşağıdaki gibi oluştu. Kod bölümüne gelin ve doğrulayı tıklayın bir sayfa açılacak en altta doğrula butonuna basın
-
-![image](https://user-images.githubusercontent.com/101635385/210168140-b4b0413e-3020-46d1-8e6a-58468094abdb.png)
-
-![image](https://user-images.githubusercontent.com/101635385/210168227-efba71d6-7e5e-40aa-91a6-b846dcdb4903.png)
-
-
-
-Forklamayı ve beğenmeyi unutmayınız :)
